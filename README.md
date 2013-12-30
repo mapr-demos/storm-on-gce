@@ -4,21 +4,19 @@ This repo provides scripts and resources to deploy [Storm](http://storm-project.
 on Google Compute Engine ([GCE](https://cloud.google.com/products/compute-engine/)).
 
 In the following, I assume you're familiar with [GCE](https://developers.google.com/compute/docs/getting-started-with-compute)
-and that you have `gctuil` up and running.
-
-For a deep dive into the topic, incl. manual set up, consult the blog post
+and that you have `gctuil` up and running. For a deep dive into the topic, incl. manual set up, consult the blog post
 [Deploying Storm on GCE](http://datadventures.markbox.io/2013/12/29/storm-on-gce).
 
 ## Install
 
 In the [GCE console](https://cloud.google.com/console), create a project with
-the ID `storm-simple` and enabled billing for it. Then,  you need to do some 
+the ID `storm-simple` and enable billing for it. Then,  you need to do some 
 (one-time) authentication:
 
     $ gcutil --project=storm-simple auth
 
 Then, you can launch the following script that provisions the four instances 
-and installs the respective software on each, depending on its role (ZooKeeper, Nimbus, Slaves).
+and prepares them for their roles (1 x ZooKeeper, 1 x Nimbus, 2 x Slaves).
 
     $ ./install_storm_on_gce.sh
 
