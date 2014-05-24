@@ -89,6 +89,5 @@ To see if it works, do the following:
     -------------------------------------------------------------------
     exclamation-topology ACTIVE     18         3            401
 
-## License 
-
-Public Domain.
+## License
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
